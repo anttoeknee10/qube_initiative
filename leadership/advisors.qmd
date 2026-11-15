@@ -5,6 +5,8 @@ subtitle: "Expert Advisors, Board Directors, and Graduate Student Advisors"
 
 ## QUBE Expert Advisors
 
+:::: {.card-grid}
+
 ::: {.qube-card}
 ::: {.profile-row}
 ::: {.profile-photo-frame}
@@ -61,9 +63,13 @@ subtitle: "Expert Advisors, Board Directors, and Graduate Student Advisors"
 :::
 :::
 
+::::
+
 ---
 
 ## QUBE Graduate Student Advisors
+
+:::: {.card-grid}
 
 ::: {.qube-card}
 ::: {.profile-row}
@@ -106,3 +112,5 @@ subtitle: "Expert Advisors, Board Directors, and Graduate Student Advisors"
 :::
 :::
 :::
+
+::::

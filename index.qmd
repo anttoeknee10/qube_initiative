@@ -34,6 +34,8 @@ Dedicated to empowering young minds to explore the intersection of **data, life 
 
 ## Mission & Vision
 
+:::: {.home-grid-2}
+
 ::: {.qube-card}
 ### Mission Statement
 QUBE is a nonprofit organization dedicated to empowering youth to explore the intersection of data, life sciences, medicine, and public health. We believe that understanding data-driven decision-making is essential for addressing today's challenges in health and society.
@@ -45,6 +47,8 @@ Through mentorship, hands-on learning, and interdisciplinary collaboration, QUBE
 ### Vision Statement
 To inspire and equip the next generation of problem-solvers with the analytical, scientific, and ethical tools to improve health and well-being, from biological systems to community outcomes, around the world.
 :::
+
+::::
 
 ## Explore QUBE Leadership & Programs
 

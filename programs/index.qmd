@@ -9,6 +9,8 @@ Through structured training, mentorship, and project-based learning, participant
 
 ## Our Four Core Programs
 
+:::: {.card-grid}
+
 ::: {.qube-card}
 ### 1. [QUBE Youth Scholars Network](youth-scholars-network.qmd)
 Our core membership and mentorship network where middle and high school students build foundational-to-advanced analytical skills through structured training and collaborative learning.
@@ -28,6 +30,8 @@ Monthly live Zoom seminars featuring leading researchers, clinicians, and indust
 ### 4. [QUBE Youth Research Showcase Symposium](research-showcase-symposium.qmd)
 An annual showcase where QUBE student scholars present their interdisciplinary data science and health research projects to peers, mentors, and expert advisors.
 :::
+
+::::
 
 ---
 

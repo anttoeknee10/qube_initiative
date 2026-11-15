@@ -5,6 +5,8 @@ subtitle: "Global Strategy, Communications, and Programs"
 
 Our Executive Committee leads QUBE Initiative's mission to empower young minds at the intersection of data, biology, medicine, and public health.
 
+:::: {.card-grid .feature-first}
+
 ::: {.qube-card}
 ::: {.profile-row}
 ::: {.profile-photo-frame}
@@ -46,6 +48,8 @@ Directs QUBE's educational programming, curriculum initiatives, and student rese
 :::
 :::
 :::
+
+::::
 
 ---
 

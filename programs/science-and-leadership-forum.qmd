@@ -24,6 +24,8 @@ Welcome to the **2026 QUBE Science and Leadership Forum**! Each month, researche
 
 ## Seminar Details
 
+:::: {.card-grid}
+
 ::: {.qube-card}
 ::: {.profile-row}
 ::: {.profile-photo-frame}
@@ -90,45 +92,4 @@ Welcome to the **2026 QUBE Science and Leadership Forum**! Each month, researche
 ![](../images/kelly-speth.png){.portrait-img alt="Kelly Speth, PhD"}
 :::
 ::: {.profile-info}
-### May Seminar: Clinical Research and Drug Development: Education to Careers
-[May 22, 2026 | 9:00–10:00 PM EST | Zoom ID: 914 6192 5123]{.badge-role}
-
-- **Speaker:** Kelly Speth, PhD
-- **Role & Affiliation:** Associate Director, Kite Pharma
-:::
-:::
-:::
-
-::: {.qube-card}
-::: {.profile-row}
-::: {.profile-photo-frame}
-![](../images/yi-zhao.png){.portrait-img alt="Yi Zhao, PhD"}
-:::
-::: {.profile-info}
-### June Seminar: Turning Data into Real-World Innovation: From Math to Data Science
-[June 12, 2026 | 9:00–10:00 PM EST | Zoom ID: 914 6192 5123]{.badge-role}
-
-- **Speaker:** Yi Zhao, PhD
-- **Role & Affiliation:** Senior Data Scientist, Apple
-:::
-:::
-:::
-
-::: {.qube-card}
-::: {.profile-row}
-::: {.profile-photo-frame}
-![](../images/paul-manser.png){.portrait-img alt="Paul Manser, PhD"}
-:::
-::: {.profile-info}
-### July Seminar: The Statistician as a Strategic Drug Developer: Life in the Biotechnology Industry
-[July 31, 2026 | 9:00–10:00 PM EST | Zoom ID: 914 6192 5123]{.badge-role}
-
-- **Speaker:** Paul Manser, PhD
-- **Role & Affiliation:** Director of Biostatistics, Biogen West Coast Hub
-:::
-:::
-:::
-
----
-
-[← QUBE Discovery Lab](discovery-lab.qmd) | [Back to All Programs](index.qmd) | [Next: QUBE Youth Research Showcase Symposium →](research-showcase-symposium.qmd)
+### May Seminar: Clinical
