@@ -1,2 +1,8 @@
 /.quarto/
 **/*.quarto_ipynb
+
+# Local OS and R session files
+.DS_Store
+.Rhistory
+.RData
+.Rproj.user/

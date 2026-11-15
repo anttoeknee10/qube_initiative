@@ -3,7 +3,7 @@
    Sky-aqua gradient canvas, royal-blue speech-frame cards, navy pill accent,
    golden dot-grid motif, and high-contrast dark-navy typography.
    ========================================================================== */
-
+ 
 :root {
   --qube-deep-navy: #062175;
   --qube-navy: #0a359c;
@@ -14,8 +14,9 @@
   --qube-card-bg: rgba(240, 251, 255, 0.94);
   --qube-pill-cyan: #6ef0f5;
   --qube-gold-dot: #f7c325;
+  --qube-max: 1240px; /* max width of the page column on desktop */
 }
-
+ 
 /* Full-page sky-aqua gradient background matching the QUBE Expert Advisors slide */
 body {
   background: linear-gradient(135deg, var(--qube-sky-top) 0%, var(--qube-sky-mid) 52%, var(--qube-sky-bottom) 100%) fixed !important;
@@ -24,7 +25,7 @@ body {
   line-height: 1.65;
   overflow-x: hidden;
 }
-
+ 
 /* Ensure Quarto content containers are wide and cohesive across the screen */
 #quarto-content,
 #quarto-content.quarto-container,
@@ -36,11 +37,11 @@ body {
   padding-right: 0 !important;
   background: transparent !important;
 }
-
+ 
 .page-columns .content,
 main.content,
 main.content.column-page {
-  max-width: 1680px !important;
+  max-width: var(--qube-max) !important;
   width: 96% !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -53,12 +54,12 @@ main.content.column-page {
   box-shadow: 0 2px 10px rgba(6, 33, 117, 0.05);
   position: relative;
 }
-
+ 
 /* Remove standalone corner pseudo-element since the top heading banner now carries the QUBE cube logo */
 main.content::before {
   display: none !important;
 }
-
+ 
 /* Golden 5x5 dot-grid decorative motif in the bottom-left corner (from slide 5) */
 main.content::after {
   content: "";
@@ -72,69 +73,69 @@ main.content::after {
   opacity: 0.85;
   pointer-events: none;
 }
-
+ 
 /* Retractable top navbar on scroll down, reappears on scroll up */
 #quarto-header.headroom {
   transition: transform 0.28s ease-in-out !important;
   will-change: transform;
 }
-
+ 
 #quarto-header.headroom--unpinned {
   transform: translateY(-100%) !important;
 }
-
+ 
 #quarto-header.headroom--pinned,
 #quarto-header.headroom--top {
   transform: translateY(0%) !important;
 }
-
+ 
 /* QUBE Logo next to "QUBE Initiative" in top-left navbar */
 .navbar-brand {
   display: inline-flex !important;
   align-items: center !important;
   gap: 0.6rem !important;
 }
-
+ 
 .navbar-logo {
   max-height: 36px !important;
   width: auto !important;
 }
-
+ 
 /* Navigation bar in deep QUBE navy with cyan pulse accent */
 .navbar {
   background: linear-gradient(90deg, #062175 0%, #0d47a1 65%, #1599b6 100%) !important;
   box-shadow: 0 4px 16px rgba(6, 33, 117, 0.25);
   border-bottom: 3px solid var(--qube-pill-cyan);
 }
-
+ 
 .navbar-brand,
 .navbar-nav .nav-link {
   color: #ffffff !important;
   font-weight: 600;
 }
-
+ 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: var(--qube-pill-cyan) !important;
 }
-
+ 
 .dropdown-menu {
   background-color: #ffffff !important;
   border: 2px solid var(--qube-royal) !important;
   border-radius: 14px !important;
   box-shadow: 0 8px 24px rgba(6, 33, 117, 0.18);
 }
-
+ 
 .dropdown-item {
   color: var(--qube-deep-navy) !important;
   font-weight: 500;
 }
-
+ 
 .dropdown-item:hover {
   background-color: #dcf6fc !important;
   color: var(--qube-deep-navy) !important;
 }
-
+ 
 /* Open the Programs dropdown on hover and hide the redundant overview item inside the menu */
 @media (min-width: 992px) {
   .navbar-nav .nav-item.dropdown:hover > .dropdown-menu {
@@ -146,7 +147,7 @@ main.content::after {
     display: none;
   }
 }
-
+ 
 /* Full-screen-width Heading Banner at the top of every subpage */
 #title-block-header.quarto-title-block.default {
   width: 100vw;
@@ -162,7 +163,7 @@ main.content::after {
   border-bottom: 5px solid var(--qube-pill-cyan);
   box-shadow: 0 4px 16px rgba(6, 33, 117, 0.12);
 }
-
+ 
 /* QUBE 3D Pulse Cube on the right side of every page's heading banner */
 #title-block-header.quarto-title-block.default::after {
   content: "";
@@ -178,7 +179,7 @@ main.content::after {
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.22));
   pointer-events: none;
 }
-
+ 
 h1.title {
   color: #ffffff !important;
   font-size: clamp(2rem, 3.2vw, 2.75rem);
@@ -190,7 +191,7 @@ h1.title {
   margin-top: 0;
   margin-bottom: 0.4rem;
 }
-
+ 
 h1.title::before {
   content: "";
   display: inline-block;
@@ -201,41 +202,41 @@ h1.title::before {
   flex-shrink: 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
-
+ 
 p.subtitle {
   color: #ccf8ff !important;
   font-weight: 600;
   font-size: 1.2rem;
   margin-bottom: 0;
 }
-
+ 
 /* Headings and body text — high contrast deep navy for effortless readability */
 h2, h3, h4 {
   color: var(--qube-deep-navy) !important;
   font-weight: 700;
 }
-
+ 
 h2 {
   border-bottom: 2px solid rgba(17, 85, 184, 0.22);
   padding-bottom: 0.4rem;
   margin-top: 1.8rem;
 }
-
+ 
 p, li, td, th {
   color: #082366 !important;
 }
-
+ 
 a {
   color: #0940a8;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-
+ 
 a:hover {
   color: #051b5c;
 }
-
+ 
 /* Hero Banner on Home Page — Spans Full Width of Screen */
 .grand-hero-banner {
   width: 100vw;
@@ -254,20 +255,20 @@ a:hover {
   border-bottom: 5px solid var(--qube-pill-cyan);
   overflow: hidden;
 }
-
+ 
 .grand-hero-inner {
-  max-width: 1480px;
+  max-width: calc(var(--qube-max) - 6.5rem);
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2.5rem;
 }
-
+ 
 .grand-hero-text {
   flex: 1.3;
 }
-
+ 
 .grand-hero-kicker {
   display: inline-block;
   background: rgba(110, 240, 245, 0.2);
@@ -281,7 +282,7 @@ a:hover {
   border-radius: 999px;
   margin-bottom: 1rem;
 }
-
+ 
 .grand-hero-title {
   font-size: clamp(2.6rem, 4.8vw, 4.2rem);
   font-weight: 900;
@@ -290,14 +291,14 @@ a:hover {
   color: #ffffff !important;
   margin: 0 0 0.75rem 0;
 }
-
+ 
 .grand-hero-subtitle {
   font-size: clamp(1.25rem, 2.1vw, 1.65rem);
   font-weight: 600;
   color: #ccf8ff !important;
   margin: 0 0 1.25rem 0;
 }
-
+ 
 .grand-hero-desc,
 .grand-hero-desc p {
   font-size: 1.12rem;
@@ -307,18 +308,18 @@ a:hover {
   max-width: 680px;
   margin-bottom: 1.6rem;
 }
-
+ 
 .grand-hero-desc strong {
   font-weight: 600 !important;
   color: #8ccbff !important;
 }
-
+ 
 .grand-hero-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
 }
-
+ 
 .grand-hero-stat {
   background: rgba(255, 255, 255, 0.14);
   border: 1px solid rgba(255, 255, 255, 0.35);
@@ -328,7 +329,7 @@ a:hover {
   padding: 0.5rem 1.05rem;
   border-radius: 12px;
 }
-
+ 
 .grand-hero-logo-box {
   flex: 0 0 auto;
   display: flex;
@@ -340,18 +341,18 @@ a:hover {
   padding: 1.5rem;
   backdrop-filter: blur(6px);
 }
-
+ 
 .grand-hero-logo-box p {
   margin: 0;
 }
-
+ 
 .grand-hero-logo {
   width: 240px !important;
   height: 240px !important;
   filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.25));
   display: block;
 }
-
+ 
 .grand-hero-acronym,
 .grand-hero-acronym p {
   color: #ffffff !important;
@@ -360,7 +361,7 @@ a:hover {
   text-align: left;
   margin: 0;
 }
-
+ 
 .grand-hero-acronym strong {
   display: inline-block;
   width: 24px;
@@ -373,7 +374,7 @@ a:hover {
   font-weight: 900;
   margin-right: 0.12rem;
 }
-
+ 
 @media (max-width: 860px) {
   .grand-hero-inner {
     flex-direction: column;
@@ -383,7 +384,7 @@ a:hover {
     justify-content: center;
   }
 }
-
+ 
 .hero-banner {
   background: linear-gradient(135deg, #c2f2fc 0%, #89dcf2 55%, #63c1e8 100%);
   color: var(--qube-deep-navy) !important;
@@ -393,14 +394,14 @@ a:hover {
   margin-bottom: 2rem;
   box-shadow: 0 8px 24px rgba(6, 33, 117, 0.14);
 }
-
+ 
 .hero-banner h1,
 .hero-banner h2,
 .hero-banner p,
 .hero-banner strong {
   color: var(--qube-deep-navy) !important;
 }
-
+ 
 /* QUBE Expert Advisors Card Frame — Rounded royal-to-cyan speech-frame */
 .qube-card {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(232, 249, 254, 0.96) 100%);
@@ -412,25 +413,25 @@ a:hover {
   box-shadow: 0 6px 18px rgba(6, 33, 117, 0.10);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-
+ 
 .qube-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(6, 33, 117, 0.16);
 }
-
+ 
 .qube-card h3 {
   margin-top: 0;
   color: var(--qube-deep-navy) !important;
   font-weight: 800;
 }
-
+ 
 /* Portrait + Description Flex Layout (used in Executive Committee, Advisors, and Seminars) */
 .profile-row {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
-
+ 
 .profile-photo-frame {
   flex: 0 0 155px;
   width: 155px;
@@ -440,7 +441,7 @@ a:hover {
   box-shadow: 0 6px 14px rgba(6, 33, 117, 0.18);
   text-align: center;
 }
-
+ 
 .profile-photo-frame img,
 img.portrait-img {
   width: 135px !important;
@@ -452,12 +453,12 @@ img.portrait-img {
   margin: 0 auto !important;
   background-color: #ffffff;
 }
-
+ 
 .profile-info {
   flex: 1;
   min-width: 0;
 }
-
+ 
 /* Multi-column grid for Branch Leadership & Card Grids */
 .home-grid-3 {
   display: grid;
@@ -466,7 +467,7 @@ img.portrait-img {
   margin-top: 1.1rem;
   margin-bottom: 2rem;
 }
-
+ 
 .home-grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -474,20 +475,20 @@ img.portrait-img {
   margin-top: 1.1rem;
   margin-bottom: 2rem;
 }
-
+ 
 .home-grid-3 .qube-card,
 .home-grid-2 .qube-card {
   margin-bottom: 0;
   height: 100%;
 }
-
+ 
 @media (max-width: 900px) {
   .home-grid-3,
   .home-grid-2 {
     grid-template-columns: 1fr;
   }
 }
-
+ 
 .profile-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -495,7 +496,7 @@ img.portrait-img {
   margin-top: 1rem;
   margin-bottom: 1.75rem;
 }
-
+ 
 .branch-card {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(232, 249, 254, 0.96) 100%);
   border: 2.5px solid var(--qube-royal);
@@ -508,7 +509,7 @@ img.portrait-img {
   align-items: center;
   justify-content: center;
 }
-
+ 
 .branch-card img {
   width: 140px !important;
   height: 165px !important;
@@ -519,25 +520,25 @@ img.portrait-img {
   margin-bottom: 0.75rem;
   box-shadow: 0 4px 10px rgba(6, 33, 117, 0.15);
 }
-
+ 
 .branch-card h3,
 .branch-card h4 {
   margin: 0.2rem 0 0.25rem 0;
   font-size: 1.15rem;
   color: var(--qube-deep-navy) !important;
 }
-
+ 
 .branch-card p {
   margin: 0;
 }
-
+ 
 @media (max-width: 640px) {
   .profile-row {
     flex-direction: column;
     text-align: center;
   }
 }
-
+ 
 /* Role badges — high-contrast royal blue pill with crisp white or dark navy text */
 .badge-role {
   display: inline-block;
@@ -550,7 +551,7 @@ img.portrait-img {
   margin-right: 0.4rem;
   margin-bottom: 0.6rem;
 }
-
+ 
 /* Tables styled for high readability on the sky-blue theme */
 table.table {
   background: rgba(255, 255, 255, 0.95);
@@ -558,18 +559,18 @@ table.table {
   overflow: hidden;
   border: 2px solid rgba(17, 85, 184, 0.25);
 }
-
+ 
 table.table thead th {
   background: linear-gradient(90deg, var(--qube-deep-navy) 0%, var(--qube-royal) 100%);
   color: #ffffff !important;
   font-weight: 700;
   border: none;
 }
-
+ 
 table.table tbody tr:nth-of-type(even) {
   background-color: rgba(215, 245, 253, 0.55);
 }
-
+ 
 /* Table of contents (right sidebar) readability */
 #TOC,
 .sidebar nav[role="doc-toc"] {
@@ -578,19 +579,19 @@ table.table tbody tr:nth-of-type(even) {
   border-radius: 16px;
   padding: 1rem 1.1rem;
 }
-
+ 
 .sidebar nav[role="doc-toc"] .nav-link,
 .sidebar nav[role="doc-toc"] #toc-title {
   color: var(--qube-deep-navy) !important;
   font-weight: 600;
 }
-
+ 
 .sidebar nav[role="doc-toc"] .nav-link.active {
   color: var(--qube-royal) !important;
   border-left-color: var(--qube-deep-navy) !important;
   font-weight: 800;
 }
-
+ 
 /* Footer readability */
 footer.footer,
 .nav-footer {
@@ -598,8 +599,51 @@ footer.footer,
   color: #ffffff !important;
   border-top: 3px solid var(--qube-pill-cyan);
 }
-
+ 
 .nav-footer p,
 .nav-footer a {
   color: #ffffff !important;
 }
+ 
+/* ==========================================================================
+   Desktop polish (additive)
+   ========================================================================== */
+ 
+/* Card grid: 2 columns on desktop, collapses to 1 column on its own */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
+  gap: 1.5rem;
+  margin: 1.1rem 0 2rem;
+}
+ 
+.card-grid > .qube-card {
+  margin-bottom: 0;
+}
+ 
+/* Optional: first card spans the full row (e.g., Founder & President) */
+.card-grid.feature-first > .qube-card:first-child {
+  grid-column: 1 / -1;
+}
+ 
+@media (min-width: 992px) {
+  /* Readable line length for body paragraphs and lists (cards are unaffected) */
+  #quarto-document-content > p,
+  #quarto-document-content > ul,
+  #quarto-document-content > ol,
+  #quarto-document-content section > p,
+  #quarto-document-content section > ul,
+  #quarto-document-content section > ol {
+    max-width: 78ch;
+  }
+ 
+  /* Line up the subpage heading banner with the content column */
+  #title-block-header.quarto-title-block.default {
+    padding-left: calc((100vw - min(96vw, var(--qube-max))) / 2 + 3.25rem);
+  }
+ 
+  #title-block-header.quarto-title-block.default::after {
+    right: calc((100vw - min(96vw, var(--qube-max))) / 2 + 3.25rem);
+  }
+}
+ 
